@@ -1,0 +1,25 @@
+# Environment and local configuration
+.env
+.env.*
+!.env.example
+config.local.*
+
+# Secrets and credentials
+*.pem
+*.key
+secrets/
+credentials/
+
+# Logs and dependency directories
+*.log
+node_modules/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editor and tooling state
+.idea/
+*.swp
+*.swo
