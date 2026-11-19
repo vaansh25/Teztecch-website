@@ -57,18 +57,6 @@ function openTab(tabId, activeButton) {
   document.getElementById(tabId).classList.add('active');
 }
 
-function handleSubmit(button) {
-  button.textContent = "✓ Message Sent! We'll contact you soon.";
-  button.style.background = 'var(--green)';
-  button.style.color = 'white';
-
-  setTimeout(() => {
-    button.textContent = '✦ Send Message & Get Free Consultation';
-    button.style.background = '';
-    button.style.color = '';
-  }, 4000);
-}
-
 document.addEventListener('DOMContentLoaded', () => {
   const revealObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach((entry) => {
@@ -141,10 +129,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   tabButtons.forEach((button) => {
     button.addEventListener('click', () => openTab(button.dataset.tab, button));
-  });
-
-  document.getElementById('submitMessage').addEventListener('click', () => {
-    handleSubmit(document.getElementById('submitMessage'));
   });
 
   scrollTopButton.addEventListener('click', () => {
